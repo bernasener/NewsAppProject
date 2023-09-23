@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEQ-gG-efp">
+                                <rect key="frame" x="32" y="219" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D7V-kD-uG0">
+                                <rect key="frame" x="32" y="285" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-gd-wBI">
+                                <rect key="frame" x="8" y="385" width="377" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="Login:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DIN-Wu-xMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D7V-kD-uG0" firstAttribute="centerX" secondItem="ZsS-gd-wBI" secondAttribute="centerX" id="0ID-BS-DwC"/>
+                            <constraint firstItem="ZsS-gd-wBI" firstAttribute="top" secondItem="D7V-kD-uG0" secondAttribute="bottom" constant="68" id="Bw6-ff-zhT"/>
+                            <constraint firstItem="UEQ-gG-efp" firstAttribute="trailing" secondItem="D7V-kD-uG0" secondAttribute="trailing" id="DGl-Qc-wUF"/>
+                            <constraint firstItem="D7V-kD-uG0" firstAttribute="top" secondItem="UEQ-gG-efp" secondAttribute="bottom" constant="32" id="GX0-QV-LdB"/>
+                            <constraint firstItem="ZsS-gd-wBI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="HB6-G5-CKJ"/>
+                            <constraint firstItem="UEQ-gG-efp" firstAttribute="leading" secondItem="D7V-kD-uG0" secondAttribute="leading" id="TSR-F5-03Q"/>
+                            <constraint firstItem="ZsS-gd-wBI" firstAttribute="top" secondItem="D7V-kD-uG0" secondAttribute="bottom" constant="66" id="fG9-aO-FTo"/>
+                            <constraint firstItem="UEQ-gG-efp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="kaQ-v9-FoZ"/>
+                            <constraint firstItem="UEQ-gG-efp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qoP-mh-sfq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZsS-gd-wBI" secondAttribute="trailing" constant="8" id="uAs-yv-6gM"/>
+                            <constraint firstItem="ZsS-gd-wBI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="164" id="v5V-K3-3wA"/>
+                            <constraint firstItem="UEQ-gG-efp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="vdC-ql-zrH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Email" destination="UEQ-gG-efp" id="uA4-fM-ZeW"/>
+                        <outlet property="Password" destination="D7V-kD-uG0" id="fxe-Ed-ggZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
